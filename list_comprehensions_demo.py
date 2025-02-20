@@ -1,16 +1,29 @@
 
 # Creating a list of even numbers
-n = 10
-even_nums = [item for item in range(0, n) if item % 2 == 0]
-print ("Even_nums : ", even_nums)
+def even_nums(n):
+  even_lsts = [item for item in range(0, n) if item % 2 == 0]
+  return even_lsts
 
 # Creating a list of odd numbers
-n = 10
-odd_nums = [item for item in range(0, n) if item % 2 != 0]
-print ("Odd_nums : ", odd_nums)
-
+def odd_nums(n):
+  odd_lsts = [item for item in range(0, n) if item % 2 != 0]
+  return odd_lsts
 
 # Creating a list of square numbers
-n = 10
-square_nums = [item*item for item in range(0, n) ]
-print ("Square_nums : ", square_nums)
+def square_nums(n):
+  square_lsts = [item*item for item in range(0, n) ]
+  return square_lsts
+
+if __name__ == "__main__":
+    even_range = int(input("Enter your limit to generate even numbers : "))
+    print ("Even Numbers : ", even_nums(even_range))
+    print()
+
+    odd_range = int(input("Enter your limit to generate odd numbers : "))
+    print ("Odd numbers : ", odd_nums(odd_range))
+    print()
+
+    square_range = int(input("Enter your limit to generate square numbers : "))
+    print ("Square numbers : ", square_nums(square_range))
+    print()
+
